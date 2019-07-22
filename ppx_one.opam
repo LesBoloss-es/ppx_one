@@ -1,0 +1,24 @@
+opam-version: "2.0"
+
+name: "ppx_one"
+version: "0.1"
+tags: [ "syntax" ]
+
+maintainer: "Niols <niols@niols.fr>"
+authors: [
+  "Niols <niols@niols.fr>"
+]
+license: "LGPL3"
+
+homepage: "https://github.com/LesBoloss-es/ppx_one"
+bug-reports: "https://github.com/LesBoloss-es/ppx_one/issues"
+dev-repo: "git://github.com/LesBoloss-es/ppx_one.git"
+
+available: [ ocaml-version >= "4.05" ]
+depends: [
+  "ppxlib" {build}
+  "dune"   {build}
+]
+
+build: ["dune" "build" "-p" name "-j" jobs]
+build-test: ["dune" "runtest"]
