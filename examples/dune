@@ -1,0 +1,10 @@
+(test
+ (name result_ppx)
+ (modules result_ppx)
+ (preprocess (pps ppx_one)))
+
+(test
+ (name lwt_ppx)
+ (libraries lwt.unix)
+ (preprocess (pps ppx_one))
+ (modules lwt_ppx))
